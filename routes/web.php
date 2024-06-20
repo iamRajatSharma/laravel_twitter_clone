@@ -10,4 +10,5 @@ use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', [DashboardController::class, "index"]);
+Route::get('/terms', [DashboardController::class, "terms"]);
 Route::get('/profile', [ProfileController::class, "index"]);

@@ -14,6 +14,8 @@
         <h1>Age: {{ $data['age'] }}</h1>
         <br>
     @endforeach
+
+    {{ date('Y')}}
 </body>
 
 </html>
