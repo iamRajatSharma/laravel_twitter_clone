@@ -5,9 +5,15 @@
                 <img style="width:50px" class="me-2 avatar-sm rounded-circle"
                     src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario" alt="Mario Avatar">
                 <div>
-                    <h5 class="card-title mb-0"><a href="#"> Mario
-                        </a></h5>
+                    <h5 class="card-title mb-0"><a href="#"> Mario </a></h5>
                 </div>
+            </div>
+            <div>
+                <form action="{{ route('idea.delete', $idea['id']) }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger btn-sm">X</button>
+                </form>
             </div>
         </div>
     </div>

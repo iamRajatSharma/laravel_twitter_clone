@@ -12,7 +12,10 @@ use App\Http\Controllers\IdeaController;
 
 Route::get('/', [DashboardController::class, "index"])->name('home');
 Route::get('/terms', [DashboardController::class, "terms"])->name('terms');
+
+
 Route::post('/store', [IdeaController::class, "store"])->name('idea.create');
+Route::delete('/delete/{id}', [IdeaController::class, "delete"])->name('idea.delete');
 
 
 

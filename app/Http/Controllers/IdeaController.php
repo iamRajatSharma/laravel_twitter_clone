@@ -27,5 +27,12 @@ class IdeaController extends Controller
         }
     }
 
+
+    public function delete($id){
+        $idea = Idea::where('id',$id)->firstOrFail();
+        $idea->delete();
+        return redirect()->route('home')->with('success', 'Idea Deleted Successfully');
+    }
+
     
 }
